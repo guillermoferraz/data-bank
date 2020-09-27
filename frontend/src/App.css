@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+}
+#containerLogo{
+    width: 300px;
+    height: 300px;
+    border: 2px solid cyan;
+    border-radius: 50%;
+
+}
+#imgLogo{
+    
+    background-image: url(./imagesApp/logo192.png);
+    background-size: contain;
+    width: 300px;
+    height: 180px;
+    
+
+}
+#titleWelcome{
+    color: green;
+    
+}
+#welcomeMaster{
+    background-image: url("https://giffiles.alphacoders.com/360/36032.gif");
+   
+}
+#welcomeSecondMaster{
+    background-color: rgba(0,0,0,0.8);
+
+}
