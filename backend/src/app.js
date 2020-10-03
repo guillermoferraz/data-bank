@@ -21,13 +21,14 @@ app.set('port', process.env.PORT || 4000);
 
 
 app.use(morgan('dev'));
+app.use(cors());
 app.use(express.urlencoded({extended: false}));
 app.use(session({
     secret: 'h19',
     resave: true,
     saveUninitialized: true
 }));
-app.use(cors());
+
 app.use(express.json());
 
 app.use(passport.initialize());
@@ -42,7 +43,7 @@ app.use((req, res, next) => {
 
 
     next();
-})
+});
 
 
 

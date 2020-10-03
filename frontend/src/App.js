@@ -14,13 +14,7 @@ function App() {
   return (
    <Router>
      <Route exact path="/"  component={Welcome}/>
-     <Route exact path="/" component={Buttons}/>
-     <Route exact path="/api/users"  component={Welcome}/>
-     <Route exact path="/check"  component={Welcome}/>
-     <Route exact path="/check" component={Buttons}/>
-     <Route exact path="/api/users" component={Buttons}/>
-     
-     
+     <Route exact path="/" component={Buttons}/> 
     
     <Route  exact path="/api/users" component={createUser}/>
     <Route exact path="/check" component={checkUser}/>

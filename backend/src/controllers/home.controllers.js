@@ -1,9 +1,10 @@
 const homeCtrl = {};
+const { isAuthenticated } = require('../helpers/auth');
 
 const User = require('../models/User');
 
-homeCtrl.getHome = async (req, res) => {
-    const users  = await User.find();
+homeCtrl.getHome =  isAuthenticated ,async (req, res) => {
+    const users  = await User.find(req.params.id);
     res.json({users});
 };
 
