@@ -5,7 +5,7 @@ const app  = require('./app');
 require('./database');
 
 
-app.use(cors());
+// app.use(cors());
 
 async function main() {
     await app.listen(app.get('port'));

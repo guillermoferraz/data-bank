@@ -26,11 +26,17 @@ export default class createUser extends Component {
         this.setState({
             [name]: value
         })
+        
     }
 
     
 
     addUser(e){
+        e.preventDefault();
+
+        let expressionEmail
+
+        expressionEmail =  /\w+@\w+\.+[a-z]/i;
         
         if(this.state.user === "" || this.state.email === "" || this.state.password === "" || this.state.confirm_password === ""){
                 
@@ -39,9 +45,79 @@ export default class createUser extends Component {
                     text: "You must complete all the fields of the form",
                     icon: "error",
                     button: "Continue"
-                })      
-             setTimeout (function(){ return false},1000);       
-        } 
+                });      
+             
+        } else if (this.state.user.length<= 2 ){
+            
+            swal({
+                title: "Error",
+                text: "The user name entered must have 3 characters minumum ",
+                icon: "error",
+                button: "Continue",
+                
+            });
+            document.getElementById('user').value = ""; 
+            return false 
+           
+                  
+        } else if (this.state.user.length>= 15){
+            swal({
+                title: "Error",
+                text: "The user name entered must have 15 characters maximum ",
+                icon: "error",
+                button: "Continue",
+                
+            });
+            document.getElementById('user').value = "";        
+            return false 
+            
+        } else if (this.state.password !== this.state.confirm_password){
+            swal({
+                title: "Error",
+                text: "The password and confirm dont must have diferent characters ",
+                icon: "error",
+                button: "Continue",
+                
+            });
+            document.getElementById('password').value = "";
+            document.getElementById('confirm_password').value = "";        
+            return false 
+        } else if (this.state.password.length>= 15){
+            swal({
+                title: "Error",
+                text: "Your password entered must have 15 characters maximum ",
+                icon: "error",
+                button: "Continue",
+                
+            });
+            document.getElementById('user').value = "";        
+            return false 
+        } else if (this.state.password.length<=7) {
+            swal({
+                title: "Error",
+                text: "Your password entered must have 8 characters minimuim ",
+                icon: "error",
+                button: "Continue",
+                
+            });
+            document.getElementById('password').value = "";        
+            return false 
+        } else if (!expressionEmail.test(this.state.email)){
+            swal({
+                title: "Error",
+                text: "Your email is incorrect, your expressio is text@text.com ",
+                icon: "error",
+                button: "Continue",
+                
+            });
+            document.getElementById('email').value = "";        
+            return false 
+        }
+
+       
+            
+         
+        
         
         
 
@@ -111,7 +187,7 @@ export default class createUser extends Component {
                             </div>
                             <div className="card-body m-0 p-3">
                                 <div className="row m-0 p-0">
-                                    <div><p id="error"></p></div>
+                                    
                                     <form className="form-group col-10 mx-auto m-0 p-0" onSubmit={this.addUser}>
                                         <input id="user" onChange={this.handleChange} value={this.state.user} type="text" name="user" placeholder="User" className="form-control m-2 mx-auto"/>
                                         <input id="email" onChange={this.handleChange} value={this.state.email} type="email" name="email" placeholder="Email" className="form-control m-2 mx-auto"/>

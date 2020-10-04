@@ -9,6 +9,10 @@ import Buttons from './components/Buttons';
 import createUser from './components/createUser';
 import checkUser from  './components/checkUser';
 import getHome from './components/getHome.js';
+import Fail from './components/fail.js';
+
+
+
 
 function App() {
   return (
@@ -18,6 +22,11 @@ function App() {
     
     <Route  exact path="/api/users" component={createUser}/>
     <Route exact path="/check" component={checkUser}/>
+    
+    <Route exact path="/api/fail" component={Fail} />
+    
+
+
     <Route exact path="/api/home" component={getHome}/>
    </Router>  
    

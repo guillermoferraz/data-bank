@@ -32,6 +32,7 @@ body{
 #checkUserMaster{
     height: 100vh;
     background-image: url("./imagesApp/codeG.gif");
+    background-size: cover;
 }
 #checkUserMask{
     background-color: rgba(0,0,0,0.7);
@@ -45,6 +46,7 @@ body{
 #createUserMaster{
     height: 100vh;
     background-image: url("./imagesApp/codeG.gif");
+    background-size: cover;
 }
 #createUserMask{
     background-color: rgba(0,0,0,0.7);
@@ -113,4 +115,45 @@ body{
 
 #confirm_password::placeholder{
     color:green;
+}
+#failMaster{
+    height: 100vh;
+    background-image: url("./imagesApp/codeG.gif");
+    background-size: cover;
+}
+#failMask{
+    background-color: rgba(0,0,0,0.7);
+    height: 100vh;
+}
+#failCard{
+    top: 150px;
+    height: 200px;
+    position: relative;
+    text-align: center;
+    background-color: rgba(0,0,0,0.8);
+    border: 3px solid greenyellow;
+}
+#textFail{
+    margin-top: 50px;
+    color: greenyellow;
+}
+#navigation{
+    border: 2px solid greenyellow;
+}
+#textLinkNav{
+    color: green;
+}
+#titleLinkNav{
+    color: greenyellow;
+    font-weight: bold;
+}
+#textLinkNav:hover{
+    color: cyan;
+}
+#titleLinkNav:hover{
+    color: cyan;
+}
+#cardUserHome{
+    background-color: rgb(51, 59, 59);
+    color: greenyellow;
 }
