@@ -10,6 +10,7 @@ import createUser from './components/createUser';
 import checkUser from  './components/checkUser';
 import getHome from './components/getHome.js';
 import Fail from './components/fail.js';
+import createNote from './components/createNote.js';
 
 
 
@@ -19,15 +20,12 @@ function App() {
    <Router>
      <Route exact path="/"  component={Welcome}/>
      <Route exact path="/" component={Buttons}/> 
-    
-    <Route  exact path="/api/users" component={createUser}/>
-    <Route exact path="/check" component={checkUser}/>
-    
-    <Route exact path="/api/fail" component={Fail} />
-    
-
-
-    <Route exact path="/api/home" component={getHome}/>
+     <Route  exact path="/api/users" component={createUser}/>
+     <Route exact path="/check" component={checkUser}/>
+     <Route exact path="/api/fail" component={Fail} />
+     <Route exact path="/api/home" component={getHome}/>
+     <Route exact path="/api/home/createNote" component={getHome}/>
+     <Route exact path="/api/home/createNote" component={createNote}/>
    </Router>  
    
   );

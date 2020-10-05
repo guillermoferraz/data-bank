@@ -49,7 +49,8 @@ export default class checkUser extends Component {
 
     render(){
         return (
-            <div id="checkUserMaster">
+            <div id="checkUserWall">
+                <div id="checkUserMaster">
                 <div id="checkUserMask">
                     <div className="col-4 mx-auto">
                         <div className="card  m-0 p-0 " id="cardCheck">
@@ -73,6 +74,7 @@ export default class checkUser extends Component {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
 
 

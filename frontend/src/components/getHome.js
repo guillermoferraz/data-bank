@@ -44,13 +44,20 @@ export default class getHome extends Component {
 
     render(){
         return (
-            <div>
+            <div id="masterHome">
+                <div id="masterHomeMask">
                 <nav id="navigation" className="navbar navbar-expand-lg navbar-dark">
-                    <Link className="nav-link" id="titleLinkNav" to="/api/home">home</Link>
+                    <Link className="nav-link" id="titleLinkNav" to="/api/home">Data Bank</Link>
                     <div className="collapse navbar-collapse">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <Link id="textLinkNav" className="nav-link" to="/api/home">item1</Link>
+                            <Link id="textLinkNav" className="nav-link" to="/api/home/createNote">Create Note</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link id="textLinkNav" className="nav-link" to="/api/home">Create List</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link id="textLinkNav" className="nav-link" to="/api/home">Community</Link>
                         </li>
 
                     </ul>
@@ -75,6 +82,7 @@ export default class getHome extends Component {
                        </div>
 
                    </div>
+                </div>
                 </div>
             </div>
         )

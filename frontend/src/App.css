@@ -6,6 +6,9 @@ body{
     height: 300px;
     border: 2px solid cyan;
     border-radius: 50%;
+    position: relative;
+    top: 100px;
+    
 
 }
 #imgLogo{
@@ -14,28 +17,65 @@ body{
     background-size: contain;
     width: 300px;
     height: 180px;
+    position: absolute;
+    
     
 
 }
 #titleWelcome{
     color: green;
+    margin-top: 120px;
     
+}
+#masterButtonsWelcome{
+    position: relative;
+    top: 500px;
+    
+}
+#wellcomeWall{
+    background-image: url("./imagesApp/wallWellcome.jpg");
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
 }
 #welcomeMaster{
     background-image: url("./imagesApp/codeG.gif");
+    background-size: 100vw 100vh;
+    position: absolute;
+    top: 0px;
+    opacity: .80;
+   
+    
+    
    
 }
 #welcomeSecondMaster{
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.9);
+    background-size: cover 100vw 100vh;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    
+   
+    
 
+}
+#checkUserWall{
+    background-image: url("./imagesApp/wallWellcome.jpg");
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
 }
 #checkUserMaster{
     height: 100vh;
     background-image: url("./imagesApp/codeG.gif");
     background-size: cover;
+    opacity: .88;
 }
 #checkUserMask{
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.9);
     height: 100vh;
 }
 #cardCheck{
@@ -43,13 +83,21 @@ body{
     top: 150px;
     background-color:rgba(24, 18, 18, 0.89);
 }
+#createUserWall{
+    background-image: url("./imagesApp/wallWellcome.jpg");
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
 #createUserMaster{
     height: 100vh;
     background-image: url("./imagesApp/codeG.gif");
     background-size: cover;
+    opacity: .85;
 }
 #createUserMask{
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.9);
     height: 100vh;
 }
 #cardUser{
@@ -116,13 +164,21 @@ body{
 #confirm_password::placeholder{
     color:green;
 }
+#failWall{
+    background-image: url("./imagesApp/wallWellcome.jpg");
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
 #failMaster{
     height: 100vh;
     background-image: url("./imagesApp/codeG.gif");
     background-size: cover;
+    opacity: .85;
 }
 #failMask{
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.9);
     height: 100vh;
 }
 #failCard{
@@ -137,8 +193,16 @@ body{
     margin-top: 50px;
     color: greenyellow;
 }
+#masterHome{
+    background-image: url("./imagesApp/wallHome.jpg");
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
 #navigation{
-    border: 2px solid greenyellow;
+    border: 1px solid greenyellow;
+    background-color: rgba(51, 59, 59, 0.452);
 }
 #textLinkNav{
     color: green;
@@ -156,4 +220,39 @@ body{
 #cardUserHome{
     background-color: rgb(51, 59, 59);
     color: greenyellow;
+}
+
+#cardNote{
+    background-color: rgb(51, 59, 59);
+    box-shadow: 4px 4px 4px 4px  rgba(20, 179, 6, 0.3);
+    position: relative;
+    top: 100px;
+
+    
+}
+#cardHeader{
+    background-color: rgba(118, 126, 126, 0.329);
+    color: greenyellow;
+    font-weight: bold;
+}
+#formNote input{
+    background-color: rgba(0,0,0,0.5);
+    color: greenyellow;
+    border-color:green;
+   
+}
+#formNote textarea{
+    background-color: rgba(0,0,0,0.5);
+    color: greenyellow;
+    border-color: green;
+    
+}
+#formNote input::placeholder{
+    color: green;
+}
+#formNote textarea::placeholder{
+    color: green;
+}
+#btnCreateNotes{
+    font-weight: bold;
 }

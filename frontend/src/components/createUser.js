@@ -174,7 +174,8 @@ export default class createUser extends Component {
 
     render() {
         return (
-            <div id="createUserMaster">
+            <div id="createUserWall">
+                            <div id="createUserMaster">
                 <div id="createUserMask">
                     <div className="col-4 mx-auto ">
                         <div className="card  m-0 p-0" id="cardUser">
@@ -201,6 +202,7 @@ export default class createUser extends Component {
                     </div>
                 </div>
                 
+            </div>
             </div>
         )
         
