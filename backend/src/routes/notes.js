@@ -17,8 +17,17 @@ router.get('/', isAuthenticated, async (req, res) => {
     res.send(notes);
 })
 router.get('/:id', isAuthenticated, async (req, res) => {
-    const oneNote = await Note.findById(req.params.id);
-    res.send(oneNote);
+    const note = await Note.findById(req.params.id);
+    res.json(note);
+})
+router.put('/:id', isAuthenticated, async (req, res) => {
+    // const oneNote = await Note.findById(req.params.id);
+    // res.send(oneNote);
+    const {title, description } = req.body;
+    await Note.findByIdAndUpdate(req.params.id, {
+        title ,description
+    });
+    res.json('Note updated')
 })
 router.delete('/:id', async(req, res) =>{
     await Note.findByIdAndRemove(req.params.id);

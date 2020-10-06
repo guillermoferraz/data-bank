@@ -280,3 +280,7 @@ body{
 #iconsNotes{
     font-size: 14px;
 }
+#cardsNotesDate{
+    color: grey;
+    font-size: 14px;
+}

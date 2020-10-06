@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import swal from 'sweetalert';
 import {Link} from 'react-router-dom';
-import toastr from 'reactjs-toastr';
+
 import 'reactjs-toastr/lib/toast.css';
 
 

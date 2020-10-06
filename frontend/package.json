@@ -14,7 +14,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "reactjs-toastr": "^1.1.0",
-    "sweetalert": "^2.1.2"
+    "sweetalert": "^2.1.2",
+    "timeago.js": "^4.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,5 +38,4 @@
       "last 1 safari version"
     ]
   }
-  
 }
