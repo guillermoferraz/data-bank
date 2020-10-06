@@ -58,7 +58,8 @@ app.use((req, res, next) => {
 
 app.use('/api/users',require('./routes/users'));
 app.use('/api/home', require('./routes/home'));
-app.use('/api/users', require('./routes/home'))
+app.use('/api/users', require('./routes/home'));
+app.use('/api/notes', require('./routes/notes'));
 
 
 

@@ -22,7 +22,7 @@ export default class getHome extends Component {
     async componentDidMount(){
         const res = await axios.get('/api/users');
         this.setState({users: res.data});
-        console.log(this.state.users);
+        // console.log(this.state.users);
 
      }       
     

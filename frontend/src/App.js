@@ -11,7 +11,7 @@ import checkUser from  './components/checkUser';
 import getHome from './components/getHome.js';
 import Fail from './components/fail.js';
 import createNote from './components/createNote.js';
-
+import getNote from './components/getNotes.js';
 
 
 
@@ -26,6 +26,8 @@ function App() {
      <Route exact path="/api/home" component={getHome}/>
      <Route exact path="/api/home/createNote" component={getHome}/>
      <Route exact path="/api/home/createNote" component={createNote}/>
+     <Route exact path="/api/home/${id}" component={createNote}/>
+     <Route exact path="/api/home" component={getNote}/>
    </Router>  
    
   );

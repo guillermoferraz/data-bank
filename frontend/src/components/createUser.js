@@ -140,9 +140,9 @@ export default class createUser extends Component {
               
             //   swal("Welcome", "New user added successfully", "success");
             swal({
-                title: "h19",
+                title: "Data Bank",
                 icon: "success",
-                text: "this is a text",
+                text: "You have successfully registered !.",
                 button: "CONTINUE",
                 
                 
@@ -175,7 +175,7 @@ export default class createUser extends Component {
     render() {
         return (
             <div id="createUserWall">
-                            <div id="createUserMaster">
+                <div id="createUserMaster">
                 <div id="createUserMask">
                     <div className="col-4 mx-auto ">
                         <div className="card  m-0 p-0" id="cardUser">

@@ -256,3 +256,27 @@ body{
 #btnCreateNotes{
     font-weight: bold;
 }
+#divNotes{
+    position: relative;
+    top: 250px;
+}
+#cardsNotes{
+    background-color: rgba(0,0,0,0.9);
+    border: none;
+    
+}
+#cardsNotesHeader{
+    background-color: rgba(118, 126, 126, 0.329);
+    text-align: center;
+    
+}
+#cardsNotesTitle{
+    color: cyan;
+    font-size: 18px;
+}
+#cardsNotesDescription{
+    color: greenyellow;
+}
+#iconsNotes{
+    font-size: 14px;
+}
