@@ -12,7 +12,8 @@ import getHome from './components/getHome.js';
 import Fail from './components/fail.js';
 import createNote from './components/createNote.js';
 import getNote from './components/getNotes.js';
-
+import createList from './components/createList.js';
+import getLists from './components/getList';
 
 
 function App() {
@@ -31,6 +32,18 @@ function App() {
      <Route exact path="/api/home/editNote/:id" component={createNote}/>
      
      <Route exact path="/api/home" component={getNote}/>
+
+
+     <Route exact path="/api/createList" component={getHome}/>
+     <Route exact path="/api/createList" component={createList} />
+     
+     <Route exact  path="/api/lists" component={getHome}/>
+     <Route exact  path="/api/lists" component={getLists}/>
+
+     <Route exact path="/api/editLists/:id" component={getHome}/>
+     <Route exact path="/api/editLists/:id" component={createList}/>
+     
+    
    </Router>  
    
   );

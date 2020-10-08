@@ -284,3 +284,69 @@ body{
     color: grey;
     font-size: 14px;
 }
+#containerList{
+    top: 120px;
+}#cardList{
+    background-color: rgb(51, 59, 59);
+    box-shadow: 4px 4px 4px 4px  rgba(20, 179, 6, 0.3);
+    
+   
+}#cardListHeader{
+    background-color: rgba(118, 126, 126, 0.329);
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+#formList input{
+    background-color: rgba(0,0,0,0.5);
+    color: greenyellow;
+    border-color:green;
+   
+}
+#formList textarea{
+    background-color: rgba(0,0,0,0.5);
+    color: greenyellow;
+    border-color: green;
+    
+}
+#formList input::placeholder{
+    color: green;
+}
+#formList textarea::placeholder{
+    color: green;
+}
+#btnList{
+    font-weight: bold;
+}
+#table{
+    top: 460px;
+    
+    
+}
+#listObjectPrimary{
+    width: 15%;
+}
+#listSection{
+    width: 25%;
+}
+#listIcons{
+    width: 3%;
+}#btnAddData{
+    top: 150px;
+}
+#closeListIcon{
+    font-size: 18px;
+}
+#containerListTable{
+    background-image: url("./imagesApp/wallHome.jpg");
+    background-size: 100vw 100vh;
+    position: relative;
+    top: 180px;
+}
+#spanUserHome{
+    font-size: 12px;
+
+}
+#spanEmailHome{
+    font-size: 12px;
+}
