@@ -9,10 +9,15 @@ export default class getHome extends Component {
             user:'',
             email:'',
             _id:'',
+            image:'',
+            path:'',
+            originalname:'',
+            images:[],
             users:[]
             
             
         };
+
    
         
    
@@ -22,9 +27,19 @@ export default class getHome extends Component {
     async componentDidMount(){
         const res = await axios.get('/api/users');
         this.setState({users: res.data});
-        // console.log(this.state.users);
+
+        const img = await axios.get('/api/avatar/');
+        this.setState({images: img.data})
+        console.log(this.state.images);
 
      }       
+
+     async deleteAvatar(id){
+        const res = await axios.delete(`/api/avatar/${id}`);
+        this.setState({image: res.data});
+        
+
+    }
     
     // componentDidMount(){
     //     this.fetchUsers();
@@ -74,7 +89,40 @@ export default class getHome extends Component {
                        <div id="cardBodyUserHome" className="card-body m-0 p-3">
                             <div id="rowUserHome">
                                 <div>
-                                    <span id="spanUserHome" className=" mr-auto">{this.state.users.user}</span>
+                                <div className="row float-right m-0 p-0" ><Link to="/avatarForm"><i className=" fas fa-upload p-0 m-0"></i></Link>
+                                    
+                                    {
+                                        this.state.images.map(image => {
+                                            return(
+                                                <a href='/api/home' key={image._id} onClick={() => this.deleteAvatar(image._id)}
+                                                ><i id="iconsNotes" className="fas fa-trash-alt  m-0 mt-1 ml-2 p-0 text-danger" title="Delete"
+                                                ></i></a>
+                                            )
+                                        })
+                                    }
+                                
+                                
+                                </div>
+                                
+
+
+                                    <div >
+                                        {
+                                            this.state.images.map(image => {
+                                                return(
+                                                 <img  key={image._id} id="avatar"
+                                                    
+                                                
+                                                 src={image.path}></img>
+                                                    
+                                                    
+                                                )
+                                                
+                                            })
+                                        }
+                                        <span id="spanUserHome" className=" ml-2">{this.state.users.user}</span>
+                                    </div>
+
                                 </div>
                                 <div>
                                     <span id="spanEmailHome" className=" mr-auto">{this.state.users.email}</span>

@@ -77,22 +77,15 @@ export default class getNote extends Component {
             
             <div className="container">
 
-                <div>
-
-                </div>
-
-
-                <div id="divNotes" className="row m-0 p-0">
+                <div id="divNotes" className="row m-0">
                 {
                     this.state.notes.map(note => {
                         return (
-                            <div id="cardsNotes" className="card col-2 m-3 p-0" key={note._id} onDoubleClick={() => this.deleteNote(note._id)}>
+                            <div id="cardsNotes" className="card col-3 m-3 p-0" key={note._id} onDoubleClick={() => this.deleteNote(note._id)}>
                             <div id="cardsNotesHeader" className="card-header m-0 p-0">
                                 <div id="cardsNotesTitle" className="card-title p-0 m-0">
                                     <a href='/api/home' onClick={() => this.deleteNote(note._id)}
                                     ><i id="iconsNotes" className="fas fa-trash-alt float-right mt-2 mr-1 p-0 text-danger" title="Delete"
-                                    
-                                    
                                     ></i></a>
 
                                     <Link  to={"/api/home/editNote/" + note._id}><i id="iconsNotes" className="fas fa-edit mr-1 mt-2 p-0 float-right text-warning" title="Edit" ></i></Link>

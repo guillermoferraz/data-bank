@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
 const {uuid} = require('uuidv4');
+const multer = require('multer');
 
 const app = express();
 require('./database');
@@ -30,6 +31,18 @@ app.use(session({
     saveUninitialized: true
 }));
 
+const storage = multer.diskStorage({
+    destination: path.join(__dirname, 'public/img/uploadAvatar'),
+    filename: (req, file, cb, filename) => {
+        cb(null, uuid() + path.extname(file.originalname));
+    }
+});
+
+app.use(multer({
+    storage: storage
+}).single('image'));
+
+
 app.use(function(req, res, next) {
     res.header('Access-Control-Allow-Origin','*');
     res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE');
@@ -52,6 +65,7 @@ app.use((req, res, next) => {
 
     next();
 });
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 
@@ -61,6 +75,7 @@ app.use('/api/home', require('./routes/home'));
 app.use('/api/users', require('./routes/home'));
 app.use('/api/notes', require('./routes/notes'));
 app.use('/api/lists', require('./routes/lists'));
+app.use('/api/avatar', require('./routes/avatar'));
 
 
 

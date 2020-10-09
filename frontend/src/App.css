@@ -1,5 +1,7 @@
 body{
-    background-color: black;
+    
+    background: rgb(61,108,29);
+    background: radial-gradient(circle, rgba(61,108,29,0.9956109550561798) 0%, rgb(18, 20, 18) 49%);
 }
 #containerLogo{
     width: 300px;
@@ -194,8 +196,10 @@ body{
     color: greenyellow;
 }
 #masterHome{
-    background-image: url("./imagesApp/wallHome.jpg");
-    background-size: 100% 100%;
+    /* background-image: url("./imagesApp/wallHome.jpg"); */
+    
+
+   
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -263,6 +267,8 @@ body{
 #cardsNotes{
     background-color: rgba(0,0,0,0.9);
     border: none;
+    top: -70px;
+    left: 60px;
     
 }
 #cardsNotesHeader{
@@ -338,8 +344,7 @@ body{
     font-size: 18px;
 }
 #containerListTable{
-    background-image: url("./imagesApp/wallHome.jpg");
-    background-size: 100vw 100vh;
+    
     position: relative;
     top: 180px;
 }
@@ -349,4 +354,18 @@ body{
 }
 #spanEmailHome{
     font-size: 12px;
+}
+#rowList{
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+#masterAvatarForm{
+    top: 150px;
+}
+#avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: contain;
 }

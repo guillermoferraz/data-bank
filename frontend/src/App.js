@@ -14,6 +14,7 @@ import createNote from './components/createNote.js';
 import getNote from './components/getNotes.js';
 import createList from './components/createList.js';
 import getLists from './components/getList';
+import avatarForm from './components/avatarForm';
 
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
      <Route exact path="/api/editLists/:id" component={getHome}/>
      <Route exact path="/api/editLists/:id" component={createList}/>
      
+
+     <Route exact path="/avatarForm" component={getHome}/>
+     <Route exact path="/avatarForm" component={avatarForm}/>
     
    </Router>  
    

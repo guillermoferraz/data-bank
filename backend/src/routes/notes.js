@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 const Note = require('../models/Notes');
+
 const {isAuthenticated } = require('../helpers/auth');
 
 
@@ -13,6 +14,7 @@ router.post('/', isAuthenticated, async (req, res) => {
     res.send({title ,description});
 })
 router.get('/', isAuthenticated, async (req, res) => {
+    
     const notes = await Note.find({user: req.user.id}).sort({date: 'desc'});
     res.send(notes);
 })

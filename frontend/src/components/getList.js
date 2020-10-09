@@ -52,7 +52,7 @@ export default class getLists extends Component {
                 <div id="table" className="container mx-auto  m-0 p-0">
                 <table className="table table-dark">
                     <thead className="bg-secondary">
-                        <tr>
+                        <tr className="text-warning">
                             <th>Object Primary</th>
                             <th>Section</th>
 
@@ -70,7 +70,7 @@ export default class getLists extends Component {
                         {
                             this.state.lists.map(list => {
                                 return (
-                                    <tr id="rowList" className="text-success" key={list._id}>
+                                    <tr id="rowList" className="text-wihte" key={list._id}>
                                         <th id="listObjectPrimary" onChange={this.handleChange} value={this.state.objectPrimary} name="objectPrimary" >{list.objectPrimary}</th>
                                         <th id="listSection" value={this.state.section} onChange={this.handleChange} name="section">{list.section}</th>
                                         <th id="listInfo" value={this.state.info} onChange={this.handleChange} name="info">{list.info}</th>
