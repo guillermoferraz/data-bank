@@ -196,9 +196,9 @@ body{
     color: greenyellow;
 }
 #masterHome{
-    /* background-image: url("./imagesApp/wallHome.jpg"); */
     
-
+    background: rgb(61,108,29);
+    background: radial-gradient(circle, rgba(61,108,29,0.9956109550561798) 0%, rgb(18, 20, 18) 49%);
    
     width: 100vw;
     height: 100vh;
@@ -368,4 +368,27 @@ body{
     height: 50px;
     border-radius: 50%;
     background-size: contain;
+}
+#cardBlogMaster{
+    top: 120px;
+}
+#masterBlog{
+    top:180px;
+}
+#cardsBlogs{
+    background-color: rgba(207, 218, 218, 0.726);
+}
+#cardsBlogHeader{
+    background-color: rgb(175, 182, 175);
+    font-weight: bold;
+    font-size: 18px;
+}
+#btnAddArticle{
+    top: -90px;
+    font-weight: bold;
+}
+#cardsBlogsDate{
+    font-size: 12px;
+    font-weight: bold;
+
 }

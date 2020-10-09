@@ -76,6 +76,7 @@ app.use('/api/users', require('./routes/home'));
 app.use('/api/notes', require('./routes/notes'));
 app.use('/api/lists', require('./routes/lists'));
 app.use('/api/avatar', require('./routes/avatar'));
+app.use('/api/myBlog', require('./routes/myBlog'));
 
 
 

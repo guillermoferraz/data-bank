@@ -73,7 +73,7 @@ export default class getHome extends Component {
                             <Link id="textLinkNav" className="nav-link" to="/api/lists">List</Link>
                         </li>
                         <li className="nav-item">
-                            <Link id="textLinkNav" className="nav-link" to="/api/home">Community</Link>
+                            <Link id="textLinkNav" className="nav-link" to="/api/myBlog">My Blog</Link>
                         </li>
 
                     </ul>

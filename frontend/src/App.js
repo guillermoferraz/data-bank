@@ -15,6 +15,10 @@ import getNote from './components/getNotes.js';
 import createList from './components/createList.js';
 import getLists from './components/getList';
 import avatarForm from './components/avatarForm';
+import createMyBlog from './components/createMyBlog';
+import getMyBlog from './components/getMyBlog';
+
+
 
 
 function App() {
@@ -47,7 +51,17 @@ function App() {
 
      <Route exact path="/avatarForm" component={getHome}/>
      <Route exact path="/avatarForm" component={avatarForm}/>
+
+     <Route exact path="/api/createMyBlog" component={getHome}/>
+     <Route exact path="/api/createMyBlog" component={createMyBlog}/>
     
+
+     <Route exact path="/api/myBlog/editBlog/:id" component={getHome}/>
+     <Route exact path="/api/myBlog/editBlog/:id" component={createMyBlog}/>
+
+     <Route exact path="/api/myBlog" component={getHome}/>
+     <Route exact path="/api/myBlog" component={getMyBlog}/>
+     
    </Router>  
    
   );
